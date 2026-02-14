@@ -1,29 +1,31 @@
 package Application;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
-    public static void main(String[] args) {
-        System.out.println("Hello, World");
-        String name;
-        int age;
-        boolean female;
+    public static inc CURRENT_YEAR=2026;
 
-        name = "Luisa";
-        age = 31;
-        female = true;
+    public static void main (String[] args) {
 
-        System.out.println("my nameis " + name);
-        System.out.println( "I am " + age + " years old");
-        System.out.println( "Am I female? " + female);
+        final String GREETING_MESSGE = "Saludo estudiantes de java";
 
-        final int CURRENTYEAR= 2026;
-        int birthYear = 1995; //Mayuscula por ser una constante e inicia por final
-        int calculateAge= CURRENTYEAR - birthYear;
-        System.out.println( "Calculated age: " + calculateAge);
+        String[] namesStudents = {"Juan", "Maria", "Pedro", "Ana", "Luis"};
+        int[] birthYears = {2000, 1998, 2002, 1995, 2001};
 
-        for (int i = 1; i<= 10;i++ ) {
-            System.out.println("Itineration: " + i);
-        }
+        List<int[]> ageStudentList = new ArrayList<>();
+        showMessage(GREETING_MESSGE);
+
+    }
+
+     static void showMessage(String message) {
+         System.out.println(message);
+     }
+
+     static int calculateAge (int birthYear) {
+         return CURRENT_YEAR - birthYear;
+     }
 
 
 
